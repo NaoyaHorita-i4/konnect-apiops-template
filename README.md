@@ -1,3 +1,5 @@
+# デモ用に環境変数は設定しています。
+
 # What's this?
 This repository is a template for APIOps in Konnect.
 
