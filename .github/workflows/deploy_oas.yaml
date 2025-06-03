@@ -28,8 +28,8 @@ jobs:
           set -x 
           cat $SPECFILE
           deck file openapi2kong -s $SPECFILE -o ./kong.yaml --verbose 9
-          # Add plugins
-          deck file add-plugins -s ./kong.yaml -o ./kong.yaml kong-plugins/*
+          # Add plugins グローバルプラグインは初回のみ追加する。
+          # deck file add-plugins -s ./kong.yaml -o ./kong.yaml kong-plugins/*
           # Add a tag
           deck file add-tags -s ./kong.yaml -o ./kong.yaml $TAG
           cat kong.yaml
